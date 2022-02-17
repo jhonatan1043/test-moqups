@@ -1,0 +1,52 @@
+<div class="card card-body mt-5">
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="search" class="col-form-label ml-2">Empleados</label>
+    </div>
+    <div class="col-auto container-search">
+      <input
+        type="search"
+        id="search"
+        class="form-control search"
+        placeholder="Buscar cualquier campo"
+      />
+      <fa-icon class="search-icon" [icon]="iconSearch"></fa-icon>
+    </div>
+  </div>
+  <div class="table resposive mt-5">
+    <table class="table table-striped table-bordered table-hover table-sm">
+      <thead>
+        <tr>
+          <th class="text-center">Nombre (Cargo)</th>
+          <th class="text-center">Edad</th>
+          <th class="text-center">Fecha de contratación</th>
+          <th class="text-center">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.name + " " + employee.position }}</td>
+          <td>{{ employee.age }}</td>
+          <td>{{ employee.hiringdate }}</td>
+          <td>
+            <button class="btn btn-sm btn-warning">
+              <fa-icon [icon]="iconEdit"></fa-icon>
+            </button>
+            <button class="btn btn-sm btn-primary">
+              <fa-icon [icon]="iconView"></fa-icon>
+            </button>
+            <button class="btn btn-sm btn-danger">
+              <fa-icon [icon]="iconDelete"></fa-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-secondary" routerLink="create-employee">
+      <fa-icon class="search-icon" [icon]="iconAdd"></fa-icon> Crear nuevo
+      empleado
+    </button>
+  </div>
+</div>

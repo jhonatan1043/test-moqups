@@ -1,0 +1,15 @@
+.form-control {
+  border-radius: 20px;
+}
+
+.container-search {
+  position: relative;
+  .search {
+    padding-left: 32px;
+  }
+  .search-icon {
+    position: absolute;
+    top: 8px;
+    left: 17px;
+  }
+}
