@@ -60,7 +60,7 @@ export class CrearEmpleadoComponent implements OnInit {
       .create(this.employees)
       .then(() => {
         swal
-          .fire('Moqups', 'Registro Guardado exitosamente', 'success')
+          .fire('test-maqups', 'Registro Guardado exitosamente', 'success')
           .then(() => {
             this.route.navigate(['']);
           });

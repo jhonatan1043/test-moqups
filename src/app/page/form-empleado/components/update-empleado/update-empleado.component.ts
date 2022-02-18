@@ -71,7 +71,7 @@ export class UpdateEmpleadoComponent implements OnInit {
       .update(this.key, this.employee)
       .then(() => {
         swal
-          .fire('Moqups', 'Registro actualizado exitosamente', 'success')
+          .fire('test-maqups', 'Registro actualizado exitosamente', 'success')
           .then(() => {
             this.route.navigate(['']);
           });

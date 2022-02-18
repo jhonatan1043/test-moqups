@@ -25,7 +25,7 @@ export class FormEmpleadoComponent implements OnInit {
   iconView = faEye;
   iconDelete = faTrash;
 
-  constructor(private employeeSv: EmpleadoService, private route: Router) {}
+  constructor(public employeeSv: EmpleadoService, private route: Router) {}
 
   ngOnInit(): void {
     this.getEmployee();
@@ -49,7 +49,7 @@ export class FormEmpleadoComponent implements OnInit {
     this.employeeSv
       .delete(key)
       .then(() => {
-        Swal.fire('test', 'Registro eliminado exitosamente', 'success');
+        Swal.fire('test-maqups', 'Registro eliminado exitosamente', 'success');
       })
       .catch((err) => console.log(err));
   }

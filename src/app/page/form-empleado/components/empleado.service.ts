@@ -9,6 +9,8 @@ import { Employee } from 'src/app/Class/Employee';
 export class EmpleadoService {
   private dbPath = '/employees';
 
+  fitlterEmployee: string = '';
+
   employeeRef: AngularFireList<Employee>;
 
   constructor(private http: HttpClient, private db: AngularFireDatabase) {

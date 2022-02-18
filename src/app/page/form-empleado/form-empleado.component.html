@@ -6,9 +6,10 @@
     <div class="col-auto container-search">
       <input
         type="search"
-        id="search"
+        name="search"
         class="form-control search"
         placeholder="Buscar cualquier campo"
+        [(ngModel)]="employeeSv.fitlterEmployee"
       />
       <fa-icon class="search-icon" [icon]="iconSearch"></fa-icon>
     </div>
@@ -24,7 +25,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let employee of employees">
+        <tr
+          *ngFor="
+            let employee of employees
+              | filtroEmpleado: 'name':employeeSv.fitlterEmployee
+          "
+        >
           <td class="text-center">
             {{ employee.name + " - " + employee.position }}
           </td>
