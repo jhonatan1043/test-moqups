@@ -1,0 +1,22 @@
+<div class="card card-body mt-4">
+  <div class="card-header">
+    <h4 class="card-title">
+      Editando:
+      <span class="text-muted">{{ name }}</span>
+    </h4>
+  </div>
+
+  <app-data-empleado
+    [employee]="data"
+    (formChanged)="dataEmit($event)"
+  ></app-data-empleado>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <a class="btn btn-light" href="">< Atras</a>&nbsp;&nbsp;
+      <button class="btn btn-success" [disabled]="!valid" (click)="update()">
+        Actualizar
+      </button>
+    </div>
+  </div>
+</div>

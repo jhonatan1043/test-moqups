@@ -25,17 +25,28 @@
       </thead>
       <tbody>
         <tr *ngFor="let employee of employees">
-          <td>{{ employee.name + " " + employee.position }}</td>
-          <td>{{ employee.age }}</td>
-          <td>{{ employee.hiringdate }}</td>
-          <td>
-            <button class="btn btn-sm btn-warning">
-              <fa-icon [icon]="iconEdit"></fa-icon>
-            </button>
-            <button class="btn btn-sm btn-primary">
-              <fa-icon [icon]="iconView"></fa-icon>
-            </button>
-            <button class="btn btn-sm btn-danger">
+          <td class="text-center">
+            {{ employee.name + " - " + employee.position }}
+          </td>
+          <td class="text-center">{{ employee.age }}</td>
+          <td class="text-center">{{ employee.hiringdate }}</td>
+          <td class="text-center">
+            <button
+              class="btn btn-sm btn-warning"
+              (click)="updateRouter(employee)"
+            >
+              <fa-icon [icon]="iconEdit"></fa-icon></button
+            >&nbsp;
+            <button
+              class="btn btn-sm btn-primary"
+              (click)="viewRouter(employee)"
+            >
+              <fa-icon [icon]="iconView"></fa-icon></button
+            >&nbsp;
+            <button
+              class="btn btn-sm btn-danger"
+              (click)="deleteItem(employee.key)"
+            >
               <fa-icon [icon]="iconDelete"></fa-icon>
             </button>
           </td>

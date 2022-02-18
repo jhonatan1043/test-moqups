@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import { Employee } from '../../Class/Employee'
+import { Employee } from 'src/app/Class/Employee';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EmpleadoService {
-
   private dbPath = '/employees';
 
   employeeRef: AngularFireList<Employee>;

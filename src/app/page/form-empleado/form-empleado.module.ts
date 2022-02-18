@@ -1,10 +1,11 @@
+import { ReactiveFormsModule } from '@angular/forms';
+import { EmpleadoModule } from './components/empleado.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { EmpleadoModule } from './../components/empleado.module';
 import { FormEmpleadoRoutingModule } from './form-empleado-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormEmpleadoComponent } from './form-empleado.component';
 import { DataTablesModule } from 'angular-datatables';
+import { FormEmpleadoComponent } from './form-empleado.component';
 
 @NgModule({
   declarations: [FormEmpleadoComponent],
